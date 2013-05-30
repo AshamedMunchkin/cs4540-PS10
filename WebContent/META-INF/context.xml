@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+
+	<!-- Together with a corresponding entry in web.xml, this configures -->
+	<!-- a data source that can be used to read from a database. -->
+
+	<Resource name="jdbc/ps10-omarshal" auth="Container"
+		type="javax.sql.DataSource" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://atr.eng.utah.edu/ps10_omarshal" username="omarshal_sw"
+		password="00747574" maxActive="3" maxIdle="1" maxWait="10000" />
+
+	<!-- Configures an authentication realm. This tells Tomcat where to look 
+		for login names, passwords, and roles -->
+	<Realm className="org.apache.catalina.realm.JDBCRealm"
+		driverName="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://atr.eng.utah.edu/ps10_omarshal"
+		connectionName="omarshal_sw" connectionPassword="00747574" digest="SHA-256"
+		userTable="Users" userNameCol="username" userCredCol="password"
+		userRoleTable="Roles" roleNameCol="role" />
+
+</Context>
+

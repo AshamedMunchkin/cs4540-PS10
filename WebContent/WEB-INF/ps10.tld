@@ -1,0 +1,57 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<tlib-version>2.0</tlib-version>
+
+	<!-- This declares the ps10:role tag -->
+	<tag>
+
+		<!-- The name of the tag as it appears in a JSP -->
+		<name>role</name>
+
+		<!-- Implementing class -->
+		<tag-class>ps10.tags.RoleTag</tag-class>
+
+		<!-- This tag has a body -->
+		<body-content>JSP</body-content>
+
+		<!-- The required attribute -->
+		<attribute>
+			<name>role</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+	</tag>
+
+
+	<!-- This declares the ps10:login tag -->
+	<tag>
+
+		<!-- The name of the tag as it appears in a JSP -->
+		<name>login</name>
+
+		<!-- Implementing class -->
+		<tag-class>ps10.tags.LoginTag</tag-class>
+
+		<!-- This tag has no body -->
+		<body-content>empty</body-content>
+
+	</tag>
+	
+	<!-- This declares the ps10:menu tag -->
+	<tag>
+
+		<!-- The name of the tag as it appears in a JSP -->
+		<name>menu</name>
+
+		<!-- Implementing class -->
+		<tag-class>ps10.tags.MenuTag</tag-class>
+
+		<!-- This tag has no body -->
+		<body-content>empty</body-content>
+
+	</tag>
+
+</taglib>
